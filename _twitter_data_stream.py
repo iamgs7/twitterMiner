@@ -43,7 +43,7 @@ def twitterreq(url, method, parameters):
 def fetchsamples():
     url = "https://stream.twitter.com/1.1/statuses/filter.json?track=fitness,training,workout,workouts,running,crossfit&locations=-129.99,25.17,-66.62,49.15"
     parameters = []
-    response = twitterreq(url, "POST", parameters)
+    response = twitterreq(url, http_method, parameters)
     for line in response:
       print (line.strip())
 
